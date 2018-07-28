@@ -1,0 +1,58 @@
+\documentclass[16pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Finding Indefinite Integrals}
+\author{Adrian D'Costa}
+\date{\today}
+
+\begin{document}
+\maketitle
+Finding the indefinite integral of $\tan{(x)}$
+\newline
+
+\displaystyle \begin{*align}
+&\int \tan(x)\;dx \\
+&=\int \frac{\sin(x)}{\cos(x)}\;dx\\
+&=\int -\frac{du}{u}\\
+&=-\ln|u| + C\\
+&=-\ln|\cos(x)| + C
+\end{*align}
+\newline
+
+\maketitle
+Finding the indefinite integral of $\cot(x)$
+\displaystyle \begin{*align}
+&\int \cot(x)\;dx \\
+&=\int \frac{\cos(x)}{\sin(x)}\;dx\\
+&=\int \frac{du}{u}\\
+&=\ln|u| + C\\
+&=\ln|\sin(x)| + C
+\end{*align}
+\newline
+
+\maketitle
+Finding the indefinite integral of $\sec^{3}(x)$
+\begin{align*}
+&\int \sec^{3}(x)dx\\
+&\text{Let } du = \sec^{2}(x)dx \therefore u = \tan(x)\\
+&dv = \sec(x) \therefore v = \sec(x)\tan(x)\\
+&=\sec(x)\tan(x) - \int \sec(x) \tan^{2}(x)dx\\
+&=\sec(x)\tan(x) - \int \sec(x)\tan^{2}(x)dx\\
+&=\sec(x)\tan(x) -\int \sec(x) \sec^{2}(x)dx + \int sec(x)dx\\
+&=\frac{1}{2}\sec(x)\tan(x)  + \frac{1}{2}\ln|\sec(x) + \tan(x)| + C
+\end{align*}
+
+$\text{Finding the limit with IHopital's Rule}$
+\maketitle
+
+\begin{align*}
+&\lim_{x \to 4}\frac{x^{2} - 16}{x - 4}\\
+&=\frac{0}{0} \text{.......indeterminate form}\\
+&\text{According to I.Hopital's Rule keep}\\
+&\text{differentiating till you reach determinate form}\\
+&=\lim_{x \to 4}\frac{2x}{1}\\
+&=\frac{8}{1}\\
+&=8
+\end{align*}
+
+\end{document}
